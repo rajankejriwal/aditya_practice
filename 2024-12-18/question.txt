@@ -1,0 +1,10 @@
+1.Write a program to print hello world.
+- hello_world.c
+2.Check if a user input is a num or string.
+-   checkstrornum.c
+3.Floyd Triangle basic one 
+- floydtri.c
+4.To print 1 to n where n is a user input.
+-   print1toN.c
+5.Find if the no. is prime or not.
+-   not able to do
