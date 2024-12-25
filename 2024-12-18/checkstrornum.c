@@ -1,22 +1,26 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
-int main(int argc, char const *argv[])
-{
-    int num;
-    char data[30];
-    printf("enter anything:");
-    scanf("%d,%c",num,data);
-    if ((num%10)>0)
-    {
-        printf("this is a integer");
-
+int isInteger(char s[]) {
+    for (int i = 0; i < strlen(s); i++) {
+        if (!isdigit(s[i])) {
+            return 0; // It's not an integer
+        }
     }
-    else
-    {
-        printf("this is a string");
-    }
-    
+    return 1; // It's an integer
+}
 
+int main() {
+    char input[100];
+    printf("Enter a value: ");
+    scanf("%s", input);
+
+    if (isInteger(input)) {
+        printf("The input is an integer.\n");
+    } else {
+        printf("The input is a string.\n");
+    }
 
     return 0;
 }
